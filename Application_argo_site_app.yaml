@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-nginx-argoapp
+  name: site-argoapp
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: my-nginx=iamraj007/my-nginx
-    argocd-image-updater.argoproj.io/my-nginx.update-strategy: latest
+    argocd-image-updater.argoproj.io/image-list: site=iamraj007/site
+    argocd-image-updater.argoproj.io/site.update-strategy: latest
     argocd-image-updater.argoproj.io/git-branch: main                     
-    argocd-image-updater.argoproj.io/my-nginx.force-update: "true"
+    argocd-image-updater.argoproj.io/site.force-update: "true"
     argocd-image-updater.argoproj.io/write-back-method: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/iamraj007/argo_apps.git
+    repoURL: https://github.com/iamraj007/argocd_apps.git
     targetRevision: HEAD
-    path: apps/my-nginx-app/overlays/dev
+    path: apps/site/overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
