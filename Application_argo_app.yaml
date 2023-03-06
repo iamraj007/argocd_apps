@@ -14,7 +14,7 @@ spec:
   source:
     repoURL: https://github.com/iamraj007/argo_apps.git
     targetRevision: HEAD
-    path: apps/overlays/dev
+    path: apps/my-nginx-app/overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
