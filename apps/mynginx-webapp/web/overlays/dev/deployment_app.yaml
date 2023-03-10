@@ -1,0 +1,9 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-frontend
+spec:
+  template:
+    spec:
+      containers:
+        - name: web-front-container-app 

@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-frontend
-  namespace: dev
+  name: web-frontend
 spec:
   replicas: 1
   strategy:
