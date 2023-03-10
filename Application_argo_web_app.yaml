@@ -14,7 +14,7 @@ spec:
   source:
     repoURL: https://github.com/iamraj007/argocd_apps.git
     targetRevision: HEAD
-    path: apps/web/overlays/dev
+    path: apps/mynginx-webapp/web/overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
