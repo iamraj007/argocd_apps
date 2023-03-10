@@ -16,7 +16,7 @@ patchesStrategicMerge:
 
 images:
 - name: iamraj007/my-nginx
-  newTag: devv4
+  newTag: devv5
 
 nameSuffix: -dev
 namePrefix: mycompany-
