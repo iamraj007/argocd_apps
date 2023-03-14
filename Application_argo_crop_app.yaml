@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: corp-kustomize-argoapp
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: corpimg=iamraj007/webdemo
+    argocd-image-updater.argoproj.io/corpimg.update-strategy: latest
+    argocd-image-updater.argoproj.io/git-branch: main                     
+    argocd-image-updater.argoproj.io/corpimg.force-update: "true"
+    argocd-image-updater.argoproj.io/write-back-method: argocd
+    #argocd-image-updater.argoproj.io/corpimg.pull-secret: secret:argocd/acr#acr    
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/iamraj007/argocd_apps.git
+    targetRevision: HEAD
+    path: apps/corpapp/overlays/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

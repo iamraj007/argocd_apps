@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: corpapp-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-corpapp
+  template:
+    metadata:
+      labels:
+        app: my-corpapp
+    spec:
+      containers:
+      - image: iamraj007/webdemo:dev-v1
+        name: corpapp-front-container-app
+        ports:
+        - containerPort: 80
+          protocol: TCP
