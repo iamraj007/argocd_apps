@@ -15,8 +15,8 @@ patchesStrategicMerge:
 - replica-and-rollout-strategy.yaml
 
 images:
-- name: iamraj007/webdemo
-  newTag: dev-v2
+- name: planethomeregistry.azurecr.io/webpoc
+  newTag: v3
 
 nameSuffix: -devenv
 namePrefix: mycorpapp-

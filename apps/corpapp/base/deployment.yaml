@@ -13,7 +13,7 @@ spec:
         app: my-corpapp
     spec:
       containers:
-      - image: iamraj007/webdemo:dev-v1
+      - image: planethomeregistry.azurecr.io/webpoc:latest
         name: corpapp-front-container-app
         ports:
         - containerPort: 80
