@@ -16,7 +16,7 @@ patchesStrategicMerge:
 
 images:
 - name: planethomeregistry.azurecr.io/webpoc
-  newTag: v3
+  newTag: latest 
 
 nameSuffix: -devenv
 namePrefix: mycorpapp-
