@@ -5,7 +5,9 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: corpimg=iamraj007/webdemo
-    argocd-image-updater.argoproj.io/corpimg.update-strategy: latest
+    argocd-image-updater.argoproj.io/corpimg.update-strategy: digest
+    #    argocd-image-updater.argoproj.io/corpimg.update-strategy: latest
+    #    argocd-image-updater.argoproj.io/corpimg.allow-tags: regexp:^latest
     argocd-image-updater.argoproj.io/git-branch: main                     
     argocd-image-updater.argoproj.io/corpimg.force-update: "true"
     argocd-image-updater.argoproj.io/write-back-method: argocd
