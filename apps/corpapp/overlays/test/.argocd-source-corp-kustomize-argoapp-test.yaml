@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - planethomeregistry.azurecr.io/webpoc@sha256:ac23dec9f8aa79ba1663f3857b9814b7b020141768df5d6c5768237632b685b9
+  - planethomeregistry.azurecr.io/webpoc@sha256:4e3578526f450aebb4e8fcc68556b25d62178a2f5fa1fc9c2981194583491fd1
