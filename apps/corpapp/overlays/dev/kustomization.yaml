@@ -1,22 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
-namespace: dev  
-
+namespace: dev
 commonLabels:
   myenv: my-corpapp-frontendapp
-
 resources:
- - ns.yaml
- - ../../../corpapp/base/
-
+- ns.yaml
+- ../../../corpapp/base/
 patchesStrategicMerge:
 - deployment_app.yaml
 - replica-and-rollout-strategy.yaml
-
 images:
 - name: planethomeregistry.azurecr.io/webpoc
-  newTag: latest 
-
+  digest: sha256:0bfbf433f52a4b5314c3f9b3cf83455816c4f65fcca02d70b95a5f0657cfff70
 nameSuffix: -devenv
 namePrefix: mycorpapp-
