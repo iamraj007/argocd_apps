@@ -9,6 +9,13 @@ metadata:
     argocd-image-updater.argoproj.io/git-branch: main                     
     argocd-image-updater.argoproj.io/my-nginx.force-update: "true"
     argocd-image-updater.argoproj.io/write-back-method: argocd
+    notifications.argoproj.io/subscribe.on-deleted.teams: ArgoCD
+    notifications.argoproj.io/subscribe.on-deployed.teams: ArgoCD
+    notifications.argoproj.io/subscribe.on-health-degraded: ArgoCD
+    notifications.argoproj.io/subscribe.on-health-degraded.teams: ArgoCD
+    notifications.argoproj.io/subscribe.on-health-degraded.undefined: ArgoCD
+    notifications.argoproj.io/subscribe.on-sync-failed.teams: ArgoCD
+    notifications.argoproj.io/subscribe.on-sync-succeeded.teams: ArgoCD  
 spec:
   project: default
   source:
